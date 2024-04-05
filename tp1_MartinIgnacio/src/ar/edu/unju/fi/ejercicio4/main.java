@@ -17,6 +17,8 @@ public class main {
 			factorial *= i--;
 		}
 		System.out.println("Factorial: "+factorial);
+		
+		scanner.close();
 	}
 
 }

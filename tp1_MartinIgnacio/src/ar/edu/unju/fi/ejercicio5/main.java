@@ -9,7 +9,7 @@ public class main {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Por favor ingrese un numero entre 1 y 9: ");
 		int numero = scanner.nextInt();
-		
+		scanner.close();
 		for(i = 0; i<=10; i++) {
 			System.out.println(numero+" X  "+i+" = "+numero*i);
 		}
