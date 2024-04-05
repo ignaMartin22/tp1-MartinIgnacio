@@ -13,7 +13,7 @@ public class main {
 		} while(i > 10 || i < 0);
 		
 		int factorial = 1;
-		while(i > 0) {
+		while(i > 0) { // Aqui uso el while con el objetivo de calcular el factorial
 			factorial *= i--;
 		}
 		System.out.println("Factorial: "+factorial);
