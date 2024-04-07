@@ -21,7 +21,7 @@ import java.time.Period;
 		this.provincia = provincia;
 	}
 	
-	public Persona(int dni, String nombre, LocalDate fechaDeNacimiento) {
+	public Persona(int dni, String nombre, LocalDate fechaDeNacimiento) { // constructor con provincia por defecto
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -73,6 +73,7 @@ import java.time.Period;
 		System.out.println("Fecha de Nacimiento: "+this.fechaDeNacimiento);
 		System.out.println("Provincia: "+this.provincia);
 		int edad = this.calcularEdad();
+		System.out.println("Edad: "+edad);
 		if(this.mayorDeEdad(edad)) {
 			System.out.println("La persona es mayor de edad");
 		}else {
