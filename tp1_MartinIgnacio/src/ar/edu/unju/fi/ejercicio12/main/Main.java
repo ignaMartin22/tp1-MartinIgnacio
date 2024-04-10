@@ -23,6 +23,7 @@ public class Main {
 		
 		persona.mostrarDatos();
 		
+		scanner.close();
 	}
 
 }
