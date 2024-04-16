@@ -7,11 +7,7 @@ public class Persona {
 	private String nombre;
 	private Calendar fechaNacimiento;
 	
-	
-	
-	
-	
-	
+
 	public String getNombre() {
 		return nombre;
 	}
