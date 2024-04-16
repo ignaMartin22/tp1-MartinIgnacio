@@ -17,7 +17,7 @@ public Pais(int codigo, String nombre) {
 	this.codigo = codigo;
 	Nombre = nombre;
 }
-
+ 
 public int getCodigo() {
 	return codigo;
 }
