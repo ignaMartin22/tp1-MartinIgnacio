@@ -1,5 +1,6 @@
 package ar.edu.unju.fi.ejercicio17.main;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -30,8 +31,16 @@ public class Main {
 				String apellido = scanner.next();
 				System.out.println("Ingrese fecha de nacimiento (dd/MM/yyyy): ");
 				String fecha = scanner.next();
+				LocalDate fechaNacimiento = null;
+				try {
 				DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-				LocalDate fechaNacimiento = LocalDate.parse(fecha, formato);
+				 fechaNacimiento = LocalDate.parse(fecha, formato);
+				} catch(Exception e) {
+					System.out.println("Cadena de fecha inválida");
+					System.out.println("Volviendo al menú principal...");
+					break;
+				}
+				
 				System.out.println("Ingrese Nacionalidad: ");
 				String nacionalidad = scanner.next();
 				System.out.println("Ingrese estatura: ");
@@ -50,7 +59,7 @@ public class Main {
 				jugador.setPosicion(posicion);
 				
 				jugadores.add(jugador);
-
+				
 				break;
 			case 2: 
 				System.out.println("Ingrese NOMBRE: ");
@@ -80,10 +89,19 @@ public class Main {
 						j.setNombre(scanner.next());
 						System.out.println("Ingrese Apellido: ");
 						j.setApellido(scanner.next());
+						
 						System.out.println("Ingrese fecha de nacimiento (dd/MM/yyyy): ");
 						String fechaNac = scanner.next();
+						LocalDate fechaNacimiento2;
+						try {
 						DateTimeFormatter formato2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-						LocalDate fechaNacimiento2 = LocalDate.parse(fechaNac, formato2);
+						fechaNacimiento2 = LocalDate.parse(fechaNac, formato2);
+						}catch(Exception e){
+							System.out.println("Fecha inválida");
+							System.out.println("Volviendo a menú  principal");
+							break;
+						}
+						
 						j.setFechaDeNacimiento(fechaNacimiento2);
 						System.out.println("Ingrese Nacionalidad: ");
 						j.setNacionalidad(scanner.next());
