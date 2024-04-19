@@ -15,7 +15,7 @@ public DestinoTuristico() {
 
 @Override
 public String toString() {
-	return "Código: " + codigo + ", Nombre: " + nombre + ", Precio: " + precio + ", Pais: " + pais
+	return "Código: " + codigo + ", Nombre: " + nombre + ", Precio: " + precio + ", Pais[ " + pais+" ]"
 			+ ", Dias: " + dias;
 }
 

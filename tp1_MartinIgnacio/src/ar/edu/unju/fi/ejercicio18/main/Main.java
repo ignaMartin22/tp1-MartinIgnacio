@@ -36,13 +36,13 @@ public class Main {
 			switch(opc) {
 			case 1:
 				DestinoTuristico destino = new DestinoTuristico();
-				System.out.println("Ingrese codigo de destino: ");
+				System.out.println("Ingrese codigo de destino(ej: 1,2,3): ");
 				destino.setCodigo(scanner.nextInt());
 				System.out.println("Ingrese nombre de destino: ");
 				destino.setNombre(scanner.next());
 				System.out.println("Ingrese precio: ");
 				destino.setPrecio(scanner.nextFloat());
-				System.out.println("Ingrese código del pais de destino: ");
+				System.out.println("Ingrese código del pais de destino (111,222,333,444): ");
 				int codigoPaisDestino = scanner.nextInt();
 				for(Pais p:  paises) {
 					if(codigoPaisDestino == p.getCodigo()) {
